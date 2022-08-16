@@ -8,7 +8,6 @@
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="shortcut icon" href="https://umich.edu/favicon.ico" />
-	<!--<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>"> -->
 </head>
 
 <body>
@@ -21,7 +20,7 @@
               <p style="text-align:center">
                 <name>Kshama Nitin Shah</name>
               </p>
-              <p>I am a second year masters student at the University of Michigan, majoring in Signal Processing and Machine Learning. I'm also currently working as a Research Associate advised by <a href="https://andrewowens.com/">Andrew Owens</a> . I'm broadly innterested in Computer Vision and Machine Learning. 
+              <p>I am a second year masters student at the University of Michigan, majoring in Signal Processing and Machine Learning. I'm also currently working as a Research Assistant advised by <a href="https://andrewowens.com/">Andrew Owens</a> . My research focuses on Computer Vision , Machine Learning and Deep Learning. 
               </p>
               <p>
                 I completed my undergraduate degree in Electronics and Communication Engineering from BITS, Dubai.
@@ -50,6 +49,99 @@
             </td>
           </tr>
         </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+          <td style="padding:20px;width:100%;vertical-align:middle">
+            <heading>Projects</heading>
+            <p>
+               Here are some of the projects that I have been working on :-)
+            </p>
+          </td>
+          </tr>
+        </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/Pipeline.png" alt="SSL Object Detection" width="200" height="120" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+                <papertitle>Self-Supervised Object Detection with Multimodal Image Captioning</papertitle>
+              <br>
+              <em>Course Project, EECS 545, Machine Learning, Winter 2022 </em>, Advisor :<a href="https://web.eecs.umich.edu/~honglak/">Honglak Lee</a>
+              <br>
+              <a href="data/EECS_545_Final_Report.pdf">Report</a>
+              /
+              <a href="images/Pipeline.png">Poster</a>
+              <br>
+              <p>Our novel proposed method drastically reduces the need of human supervision required for training an Object Detector.</p> 
+              <P>Leveraged a language supervised pre-trained bi-directional captioning model (VirTex-v2) that outputs set of diverse captions given an image. </P>
+              <p>Further, zero-shot transfered using prompt engineering and then filtered using noun and target extraction modules to get a set of "words of interest" from the generated captions.</p>
+              <p>Using these "words of interest", utilized Gradient Class Activation Maps to localize an object given an image and draw a bounding box around it. Thus, creating a pseudo label and pseudo bounding boxes that act as supervision to train the Object Detector.</p>
+              <p>Finally, trained a Fully Convolution Single Stage Object Detector (FCOS) using new small modified verison of GioU loss to account for the noise in the generated pseudo bounding boxes. We verify our techniques on Pascal-VOC dataset. </p>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <br>
+        <br>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/Inference.png" alt="Fine-grained Food Classification" width="200" height="120" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+                <papertitle>Language Supervised Vision Pre-Training for Fine-grained Food Classification </papertitle>
+              
+              <br>
+              <em>Course Project, EECS 598-008, Deep Learning for Computer Vision, Winter 2022 </em>, Advisor :<a href="https://web.eecs.umich.edu/~justincj/">Justin Johnson</a>
+              <br>
+              <a href="data/EECS_598_008_Final_Report">Report</a>
+              <br>
+              <p>Subsampled RedCaps dataset from sub-reddits pertinent to food. Our dataset is unique and contains image-caption pairs from manually curated food related sub-reddits from 04/2020 - 04/2022.</p>
+              <p>Pre-trained a bi-directional image captioning model using RegNeX-800MF as feature extractor for image and 2 encoder-decoder transformer layer to learn semantic representations from the captions using our subsampled dataset.</p> 
+              <P>With limited hardware resources, our best model acheived 20 % zero shot accuracy on the test-set of Food-101 dataset. </P>
+            </td>
+          </tr>
+        </tbody></table>
+        <br>
+        <br>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/model_arch1" alt="Depth Estimation" width="200" height="120" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+                <papertitle>A Monocular Local Mapper for Urban Scenes  </papertitle>
+              <br>
+              <em>Course Project, EECS 442, Computer Vision, Fall 2021 </em>, Advisor :<a href="https://kim.engin.umich.edu/">Hun-Seok Kim</a>
+              <br>
+              <a href="data/EECS442_Report_Depth_Est.pdf">Report</a>
+              <br>
+              <p>Developed a model to perform object detection, semantic segmentation and depth estimation simultaneously using a U-Net, YOLO-v1 and MobileNet-V3 feature extractor.
+                </p>
+            </td>
+          </tr>
+        </tbody></table>
+      </td>
+    </tr>
+  </table>
+  Template borrowed from  <a href="https://jonbarron.info/">here</a>.
+</body> 
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
         <!--
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr onmouseout="malle_stop()" onmouseover="malle_start()">
