@@ -75,7 +75,9 @@
               <br>
               <!--<p>We propose a novel self-supervised method to generate pseudo bounding box and pseudo object class labels by prompting an image captioning model which was further finetuned using the FCOS object detection model.</p>-->
               <p>We developed a novel self supervised pipeline that uses natural language supervision as a pre-training task to localize objects given an image. </p>
+              <p>We also developed specialized prompts and heatmap visualizations to generate pseudo ground truth object classes and bounding box coordinates.</p>
               <p>Upon finetuning the model with a few supervised labels, we observed that the model performed as well as other semi-supervised object detection models.</p>
+              <p>Achieved an mAP of 21.57% upon training the best performing model with an FCOS object detection model. </p>
             </td>
           </tr>
         </tbody></table>
@@ -96,8 +98,11 @@
               <br>
               <a href="data/EECS_598_008_Final_Report.pdf">Report</a>
               <br>
+              <!--
               <p>Performed zero-shot transfer by pre-training a scaled down image captioning model using a RegNet-X-800 MF and a 2-layer transformer </p>
-              <p>Achieved a 20% top-5 classification accuracy for the downstream task of fine-grained food classification</p>
+              <p>Achieved a 20% top-5 classification accuracy for the downstream task of fine-grained food classification</p>-->
+              <p>Worked on fine-grained food classification of food by leveraging a vision and language pre-training model, which was trained on sub-reddits from the RedCaps dataset.</p>
+              <p>Achieved a 20% top-5 classification accuracy after zero-shot transfer and a 21% classification accuracy after fine-tuning the model.</p>
             </td>
           </tr>
         </tbody></table>
