@@ -1,218 +1,593 @@
-<!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kshama Nitin Shah | AI Engineer & Researcher</title>
+    <meta name="author" content="Kshama Nitin Shah">
+    <meta name="description" content="Personal portfolio of Kshama Nitin Shah, an AI Engineer specializing in Machine Learning, Deep Learning, and Computer Vision.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Enable class-based dark mode
+        }
+    </script>
+    <style>
+        /* Light Theme Variables */
+        :root {
+            --bg-color: #f3f4f6;
+            --text-color: #1f2937;
+            --card-bg: rgba(255, 255, 255, 0.6);
+            --card-border: rgba(0, 0, 0, 0.1);
+            --heading-gradient-from: #a855f7;
+            --heading-gradient-to: #d946ef;
+            --accent-text: #a855f7;
+            --accent-bg: #9333ea;
+            --accent-bg-hover: #7e22ce;
+            /* Updated for better visibility in light mode */
+            --canvas-particle-color: 'rgba(107, 114, 128, 0.7)'; 
+            --canvas-line-color-base: '156, 163, 175'; 
+            --canvas-opacity: 0.35;
+        }
 
-  <title>Kshama Nitin Shah</title>
-  
-  <meta name="author" content="Kshama Nitin Shah">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="shortcut icon" href="images/nn.png"/>
-</head>
-
-<body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Kshama Nitin Shah</name>
-              </p>
-              <p>I am an AI Algorithm Developer at Stoneridge Inc. and a recent graduate from the University of Michigan with a masters in Machine Learning. I've also worked as a Research Assistant advised by <a href="https://web.eecs.umich.edu/~justincj/">Justin Johnson</a> and <a href="https://andrewowens.com/">Andrew Owens</a> . My research focuses on Computer Vision , Machine Learning and Deep Learning.
-              </p>
-              <p>
-                I completed my undergraduate degree in Electronics and Communication Engineering from BITS, Dubai.
-              </p>
-              <p>Feel free to email me if you're interested in collaborating on research related to Computer Vision or Machine Learning.</p>
-              <p style="text-align:center">
-                <a href="mailto:kshama@umich.edu">Email</a> &nbsp/&nbsp
-                <a href="data/Kshama_CV_latest.pdf">CV</a> &nbsp/&nbsp
-                <a href="https://github.com/kshama2705">Github</a> &nbsp/&nbsp
-                <a href="data/UMICH_Transcript_updated.pdf">Transcript</a>
-              </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/Kshama.png"><img style="width:100%;max-width:100%" alt="profile photo" src="images/Kshama.png" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Research</heading>
-              <p>
-                My research interests broadly lie in image and video understanding and multimodal learning. Specifically I'm interested in developing 'self-supervised' computer vision models that learn from multimodal sensation specifically natural language and cross modal image data.
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <heading>Projects</heading>
-          </td>
-          </tr>
-        </tbody></table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/Pipeline.png" alt="SSL Object Detection" width="200" height="120" style="border-style: none">
-            </td>
-            <td width="75%" valign="middle">
-                <papertitle>Self-Supervised Object Detection with Multimodal Image Captioning</papertitle>
-              <br>
-              <em>Course Project, EECS 545, Machine Learning, Winter 2022 </em>, Advisor :<a href="https://web.eecs.umich.edu/~honglak/">Honglak Lee</a>
-              <br>
-              <a href="data/EECS_545_Final_Report.pdf">Report</a>
-              /
-              <a href="images/Pipeline.png">Poster</a>
-              /
-              <a href="https://github.com/kshama2705/545-ML-Project">Code</a>
-              <br>
-              <!--<p>We propose a novel self-supervised method to generate pseudo bounding box and pseudo object class labels by prompting an image captioning model which was further finetuned using the FCOS object detection model.</p>-->
-              <p>We developed a novel self supervised pipeline that uses natural language supervision as a pre-training task to localize objects given an image. </p>
-              <p>We also developed specialized prompts and heatmap visualizations to generate pseudo ground truth object classes and bounding box coordinates.</p>
-              <p>Upon finetuning the model with a few supervised labels, we observed that the model performed as well as other semi-supervised object detection models.</p>
-              <p>Achieved an mAP of 21.57% upon training the best performing model with an FCOS object detector. </p>
-            </td>
-          </tr>
-        </tbody></table>
-
-        <br>
-        <br>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/Inference.png" alt="Fine-grained Food Classification" width="200" height="400" style="border-style: none">
-            </td>
-            <td width="75%" valign="middle">
-                <papertitle>Language Supervised Vision Pre-Training for Fine-grained Food Classification </papertitle>
-              
-              <br>
-              <em>Course Project, EECS 598-008, Deep Learning for Computer Vision, Winter 2022 </em>, Advisor :<a href="https://web.eecs.umich.edu/~justincj/">Justin Johnson</a>
-              <br>
-              <a href="data/EECS_598_008_Final_Report.pdf">Report</a>
-              <br>
-              <!--
-              <p>Performed zero-shot transfer by pre-training a scaled down image captioning model using a RegNet-X-800 MF and a 2-layer transformer </p>
-              <p>Achieved a 20% top-5 classification accuracy for the downstream task of fine-grained food classification</p>-->
-              <p>Worked on fine-grained food classification of food by leveraging a vision and language pre-training model, which was trained on sub-reddits from the RedCaps dataset.</p>
-              <p>Achieved a 20% top-5 classification accuracy after zero-shot transfer.</p>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/vqa_examples.png" alt="Fine-grained Food Classification" width="200" height="400" style="border-style: none">
-            </td>
-            <td width="75%" valign="middle">
-                <papertitle>MC-VQA using customized prompts </papertitle>
-              
-              <br>
-              <em>Course Project, EECS 595, Natural Language Processing, Fall 2022 </em>, Advisor :<a href="https://web.eecs.umich.edu/~chaijy/">Joyce Chai</a>
-              <br>
-              <a href="data/EECS_595_Final_Report.pdf">Report</a>
-              <br>
-              
-              <p>Developed a novel pipeline to perform zero-shot Visual Question Answering by conjoining large pre-trained models such as CLIP and the T-5 transformer.</p>
-              <p>The way we did this is by converting questions into declarative statements and using these with the images and multiple choice answers to perform zero-shot VQA using CLIP.</p>
-              <p>Achieved a total accuracy of 49.5% which is similar to the SOTA zero-shot VQA performance and better than the previous SOTA in zero-shot VQA.</p>
-            </td>
-          </tr>
-        </tbody></table>
-        <br>
-        <br>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/model_arch1.png" alt="Depth Estimation" width="200" height="120" style="border-style: none">
-            </td>
-            <td width="75%" valign="middle">
-                <papertitle>A Monocular Local Mapper for Urban Scenes  </papertitle>
-              <br>
-              <em>Course Project, EECS 442, Computer Vision, Fall 2021 </em>, Advisor :<a href="https://andrewowens.com/">Andrew Owens</a>
-              <br>
-              <a href="data/EECS442_Report_Depth_Est.pdf">Report</a>
-              /
-              <a href="https://github.com/kshama2705/EECS442-final-project">Code</a>
-              <br>
-              <p>Developed a model to perform object detection, semantic segmentation and depth estimation simultaneously using a U-Net, YOLO-v1 and MobileNet-v3 feature extractor.
-                </p>
-            </td>
-          </tr>
-        </tbody></table>
-
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-        <tr>
-          <td>
-            <heading>Teaching</heading>
-          </td>
-        </tr>
-      </tbody></table>
-      <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-        <tr>
-          <td style="padding:20px;width:25%;vertical-align:middle">
-            <img src="images/UM_Logo.png" alt="cs188" width="128">
-          </td>
-          <td width="75%" valign="center">
-            Graduate Student Instructor 
-            <br>
-            <br>
-            <a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa22/">EECS 442/504 Computer Vision</a> (Fall 2022), <a href="http://andrewowens.com/">Prof. Andrew Owens</a>
-
-            <br>
-            <br>
-          </td>
-        </tr>
-      </tbody></table>
-      
-      <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-        <tr>
-          <td style="padding:20px;width:25%;vertical-align:middle">
-            <img src="images/UM_Logo.png" alt="cs188" width="128">
-          </td>
-          <td width="75%" valign="center">
-            Graduate Student Instructor 
-            <br>
-            <br>
-            <a href="https://web.eecs.umich.edu/~fouhey/teaching/EECS442_W23/">EECS 442 Computer Vision</a> (Winter 2023), <a href="https://web.eecs.umich.edu/~fouhey/">Prof. David Fouhey</a>
-
-            <br>
-            <br>
-          </td>
-        </tr>
-      </tbody></table>
-
-
-      </td>
-    </tr>
-  </table>
+        /* Dark Theme Variables */
+        html.dark {
+            --bg-color: #0d0c1d;
+            --text-color: #d1d5db;
+            --card-bg: rgba(25, 25, 40, 0.6);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --heading-gradient-from: #fbcfe8;
+            --heading-gradient-to: #a855f7;
+            --accent-text: #d946ef;
+            --accent-bg: #a855f7;
+            --accent-bg-hover: #9333ea;
+            --canvas-particle-color: 'rgba(217, 70, 239, 0.7)';
+            --canvas-line-color-base: '168, 85, 247'; 
+            /* Increased opacity for better visibility */
+            --canvas-opacity: 0.4; 
+        }
         
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-      
+        #neural-network-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: var(--canvas-opacity);
+            transition: opacity 0.3s ease;
+        }
+        
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(217, 70, 239, 0.5); /* A hint of the accent color on hover */
+            transform: translateY(-4px);
+        }
+        
+        .section-heading {
+             background: -webkit-linear-gradient(45deg, var(--heading-gradient-from), var(--heading-gradient-to));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .accent-text {
+            color: var(--accent-text);
+        }
+
+        .accent-bg {
+            background-color: var(--accent-bg);
+        }
+        .accent-bg:hover {
+            background-color: var(--accent-bg-hover);
+        }
+        /* Styles for the AI Assistant Modal */
+        #ai-chat-modal {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .ai-chat-bubble {
+            max-width: 80%;
+        }
+        .ai-chat-bubble-user {
+            background-color: var(--accent-bg);
+        }
+        .ai-chat-bubble-assistant {
+            background-color: #e5e7eb;
+        }
+        html.dark .ai-chat-bubble-assistant {
+             background-color: #374151;
+        }
+    </style>
+</head>
+<body class="text-gray-800 dark:text-gray-300">
+    <canvas id="neural-network-canvas"></canvas>
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/50 dark:bg-black/50 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold text-gray-900 dark:text-white">Kshama Nitin Shah</a>
+            <div class="flex items-center space-x-6">
+                <nav class="hidden md:flex space-x-6 text-sm">
+                    <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-fuchsia-500 dark:hover:text-fuchsia-400 transition-colors">About</a>
+                    <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-fuchsia-500 dark:hover:text-fuchsia-400 transition-colors">Projects</a>
+                    <a href="#teaching" class="text-gray-600 dark:text-gray-300 hover:text-fuchsia-500 dark:hover:text-fuchsia-400 transition-colors">Teaching</a>
+                    <a href="mailto:kshama@umich.edu" class="text-gray-600 dark:text-gray-300 hover:text-fuchsia-500 dark:hover:text-fuchsia-400 transition-colors">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="text-gray-600 dark:text-gray-300 hover:text-fuchsia-500 dark:hover:text-fuchsia-400 transition-colors">
+                    <svg id="theme-icon-light" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg id="theme-icon-dark" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+                <button id="mobile-menu-button" class="md:hidden text-gray-900 dark:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/90 dark:bg-gray-900/90">
+            <a href="#about" class="block py-2 px-6 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">About</a>
+            <a href="#projects" class="block py-2 px-6 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Projects</a>
+            <a href="#teaching" class="block py-2 px-6 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Teaching</a>
+            <a href="mailto:kshama@umich.edu" class="block py-2 px-6 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-12 text-center md:text-left">
+            <div class="md:w-2/3 space-y-4">
+                <h1 class="text-4xl md:text-6xl font-black text-gray-900 dark:text-white leading-tight">AI Engineer & Researcher</h1>
+                <h2 class="text-xl md:text-2xl font-bold accent-text">Machine Learning & Computer Vision</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto md:mx-0">
+                    AI Algorithm Developer at Stoneridge Inc. and a recent Machine Learning graduate from the University of Michigan. Passionate about building intelligent systems at the intersection of computer vision and multimodal learning.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start items-center gap-4 pt-4">
+                    <button id="open-ai-chat" class="accent-bg text-white font-semibold px-6 py-2 rounded-lg transition-colors">✨ Ask My AI Assistant</button>
+                    <a href="data/Kshama_CV_latest.pdf" class="bg-gray-700 text-white font-semibold px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors">View CV</a>
+                    <a href="https://github.com/kshama2705" target="_blank" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/3 flex justify-center">
+                <!-- Replace with your actual image path -->
+                <img src="images/Kshama.png" alt="Kshama Nitin Shah" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-gray-300 dark:border-gray-700 shadow-2xl">
+            </div>
+        </section>
+
+        <!-- About / Research Section -->
+        <section id="about" class="py-20 md:py-32">
+            <h3 class="text-4xl font-bold section-heading mb-4 text-center">About Me</h3>
+            <p class="text-center text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
+                My research interests broadly lie in image and video understanding and multimodal learning. Specifically, I'm interested in developing 'self-supervised' computer vision models that learn from multimodal sensation like natural language and cross-modal image data.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 md:py-32">
+            <h3 class="text-4xl font-bold section-heading mb-16 text-center">Featured Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 -->
+                <div class="glass-card rounded-xl p-6 flex flex-col">
+                    <img src="images/Pipeline.png" alt="SSL Object Detection" class="rounded-lg mb-4 aspect-video object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x360/191928/FFFFFF?text=Image+Not+Found';">
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Self-Supervised Object Detection with Multimodal Image Captioning</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 flex-grow">A novel self-supervised pipeline using natural language supervision to localize objects, achieving an mAP of 21.57% when finetuned with an FCOS detector.</p>
+                    <div class="mt-4 flex space-x-2">
+                        <a href="data/EECS_545_Final_Report.pdf" class="text-xs bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full hover:bg-fuchsia-100 dark:hover:bg-fuchsia-500 transition-colors">Report</a>
+                        <a href="https://github.com/kshama2705/545-ML-Project" class="text-xs bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full hover:bg-fuchsia-100 dark:hover:bg-fuchsia-500 transition-colors">Code</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="glass-card rounded-xl p-6 flex flex-col">
+                    <img src="images/Inference.png" alt="Fine-grained Food Classification" class="rounded-lg mb-4 aspect-video object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x360/191928/FFFFFF?text=Image+Not+Found';">
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Language Supervised Pre-Training for Fine-grained Food Classification</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 flex-grow">Leveraged a vision and language pre-training model, trained on RedCaps sub-reddits, for fine-grained food classification, achieving 20% top-5 accuracy in zero-shot transfer.</p>
+                    <div class="mt-4 flex space-x-2">
+                        <a href="data/EECS_598_008_Final_Report.pdf" class="text-xs bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full hover:bg-fuchsia-100 dark:hover:bg-fuchsia-500 transition-colors">Report</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="glass-card rounded-xl p-6 flex flex-col">
+                    <img src="images/vqa_examples.png" alt="MC-VQA" class="rounded-lg mb-4 aspect-video object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x360/191928/FFFFFF?text=Image+Not+Found';">
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">MC-VQA using Customized Prompts</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 flex-grow">Developed a novel zero-shot VQA pipeline by conjoining CLIP and T-5, achieving 49.5% accuracy, which is competitive with state-of-the-art zero-shot models.</p>
+                    <div class="mt-4 flex space-x-2">
+                        <a href="data/EECS_595_Final_Report.pdf" class="text-xs bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full hover:bg-fuchsia-100 dark:hover:bg-fuchsia-500 transition-colors">Report</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                 <div class="glass-card rounded-xl p-6 flex flex-col">
+                    <img src="images/model_arch1.png" alt="Depth Estimation" class="rounded-lg mb-4 aspect-video object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x360/191928/FFFFFF?text=Image+Not+Found';">
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">A Monocular Local Mapper for Urban Scenes</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 flex-grow">Developed a model to perform object detection, semantic segmentation, and depth estimation simultaneously using a U-Net, YOLO-v1, and MobileNet-v3 feature extractor.</p>
+                    <div class="mt-4 flex space-x-2">
+                        <a href="data/EECS442_Report_Depth_Est.pdf" class="text-xs bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full hover:bg-fuchsia-100 dark:hover:bg-fuchsia-500 transition-colors">Report</a>
+                        <a href="https://github.com/kshama2705/EECS442-final-project" class="text-xs bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full hover:bg-fuchsia-100 dark:hover:bg-fuchsia-500 transition-colors">Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching Section -->
+        <section id="teaching" class="py-20 md:py-32">
+            <h3 class="text-4xl font-bold section-heading mb-16 text-center">Teaching Experience</h3>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- Teaching Item 1 -->
+                <div class="glass-card rounded-xl p-6 flex items-center gap-6">
+                    <img src="images/UM_Logo.png" alt="University of Michigan Logo" class="w-16 h-16 rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/100x100/191928/FFFFFF?text=Image+Not+Found';">
+                    <div>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg">Graduate Student Instructor</h4>
+                        <p class="accent-text">EECS 442/504 Computer Vision (Fall 2022)</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Advisor: Prof. Andrew Owens</p>
+                    </div>
+                </div>
+                <!-- Teaching Item 2 -->
+                <div class="glass-card rounded-xl p-6 flex items-center gap-6">
+                    <img src="images/UM_Logo.png" alt="University of Michigan Logo" class="w-16 h-16 rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/100x100/191928/FFFFFF?text=Image+Not+Found';">
+                    <div>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg">Graduate Student Instructor</h4>
+                        <p class="accent-text">EECS 442 Computer Vision (Winter 2023)</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Advisor: Prof. David Fouhey</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- AI Assistant Chat Modal -->
+    <div id="ai-chat-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4 opacity-0 -translate-y-4 pointer-events-none">
+        <div class="glass-card w-full max-w-2xl max-h-[80vh] rounded-2xl flex flex-col shadow-2xl">
+            <!-- Modal Header -->
+            <div class="flex-shrink-0 flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-700">
+                <h3 class="font-bold text-lg text-gray-900 dark:text-white">✨ AI Assistant</h3>
+                <button id="close-ai-chat" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+            </div>
+            <!-- Chat Messages -->
+            <div id="ai-chat-messages" class="flex-grow p-4 space-y-4 overflow-y-auto">
+                <!-- Initial message -->
+                <div class="flex justify-start">
+                    <div class="ai-chat-bubble ai-chat-bubble-assistant text-gray-900 dark:text-gray-200 rounded-lg p-3">
+                        <p>Hello! I'm Kshama's AI assistant. Ask me anything about her projects or experience.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Message Input -->
+            <div class="flex-shrink-0 p-4 border-t border-gray-200 dark:border-gray-700">
+                <form id="ai-chat-form" class="flex items-center gap-2">
+                    <input id="ai-chat-input" type="text" placeholder="Ask about a project..." class="w-full bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-fuchsia-500">
+                    <button type="submit" class="accent-bg text-white font-semibold px-4 py-2 rounded-lg transition-colors flex items-center">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
+    <!-- Footer -->
+    <footer class="text-center py-8 mt-16 border-t border-gray-200 dark:border-gray-800">
+        <p class="text-gray-500 dark:text-gray-500 text-sm">&copy; 2024 Kshama Nitin Shah. All rights reserved.</p>
+        <p class="text-gray-400 dark:text-gray-600 text-xs mt-2">Original template from Jon Barron, redesigned with Tailwind CSS.</p>
+    </footer>
+
+    <script>
+        // --- Theme Toggling Logic ---
+        const themeToggle = document.getElementById('theme-toggle');
+        const lightIcon = document.getElementById('theme-icon-light');
+        const darkIcon = document.getElementById('theme-icon-dark');
+
+        // Function to set theme and update icon
+        function setTheme(isDark) {
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                lightIcon.classList.remove('hidden');
+                darkIcon.classList.add('hidden');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+                lightIcon.classList.add('hidden');
+                darkIcon.classList.remove('hidden');
+            }
+        }
+
+        // Initial theme setup
+        const isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.theme;
+        setTheme(savedTheme === 'dark' || (!savedTheme && isSystemDark));
+
+        // Event listener for the toggle button
+        themeToggle.addEventListener('click', () => {
+            setTheme(!document.documentElement.classList.contains('dark'));
+            // Re-initialize canvas animation to pick up new colors
+            initCanvasAnimation();
+        });
 
 
+        // --- Mobile Menu Toggle ---
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
 
-  Template borrowed from  <a href="https://jonbarron.info/">here</a>.
-</body> 
+        // --- Neural Network Canvas Animation ---
+        const canvas = document.getElementById('neural-network-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let animationFrameId;
+
+        function getCssVariable(variable) {
+            // Need to get the computed style of the root element
+            return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
+        }
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        function createParticles() {
+            particles = [];
+            // Reduce particle count for a cleaner look with larger nodes
+            let particleCount = Math.floor(canvas.width * canvas.height / 35000);
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.3, // Slower movement
+                    vy: (Math.random() - 0.5) * 0.3,
+                    radius: Math.random() * 2 + 1, // Larger nodes
+                    connections: 0 // Keep track of connections
+                });
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const particleColor = getCssVariable('--canvas-particle-color').replace(/'/g, '');
+            const lineColorBase = getCssVariable('--canvas-line-color-base').replace(/'/g, '');
+
+            // Reset connections count
+            particles.forEach(p => p.connections = 0);
+
+            // Draw connections first
+            ctx.strokeStyle = `rgba(${lineColorBase}, 0.5)`;
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dist = Math.hypot(particles[i].x - particles[j].x, particles[i].y - particles[j].y);
+                    
+                    // Connect if close enough and not too many connections already
+                    if (dist < 150 && particles[i].connections < 4 && particles[j].connections < 4) {
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        particles[i].connections++;
+                        particles[j].connections++;
+                    }
+                }
+            }
+            ctx.stroke();
+
+
+            // Draw particles (nodes) on top of lines
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                
+                // Draw a halo/glow for the neuron
+                const grad = ctx.createRadialGradient(p.x, p.y, p.radius * 0.5, p.x, p.y, p.radius * 2.5);
+                grad.addColorStop(0, `rgba(${lineColorBase}, 0.6)`);
+                grad.addColorStop(1, `rgba(${lineColorBase}, 0)`);
+                
+                ctx.beginPath();
+                ctx.fillStyle = grad;
+                ctx.arc(p.x, p.y, p.radius * 2.5, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Draw the core of the neuron
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = particleColor;
+                ctx.fill();
+            });
+
+
+            animationFrameId = requestAnimationFrame(animate);
+        }
+
+        function initCanvasAnimation() {
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+            resizeCanvas();
+            createParticles();
+            animate();
+        }
+        
+        window.addEventListener('resize', initCanvasAnimation);
+        initCanvasAnimation();
+
+        // --- AI Assistant Chat Logic ---
+        const openChatBtn = document.getElementById('open-ai-chat');
+        const closeChatBtn = document.getElementById('close-ai-chat');
+        const chatModal = document.getElementById('ai-chat-modal');
+        const chatForm = document.getElementById('ai-chat-form');
+        const chatInput = document.getElementById('ai-chat-input');
+        const chatMessages = document.getElementById('ai-chat-messages');
+        const chatSubmitBtn = chatForm.querySelector('button[type="submit"]');
+
+        function toggleChatModal(show) {
+            if(show) {
+                chatModal.classList.remove('opacity-0', '-translate-y-4', 'pointer-events-none');
+            } else {
+                chatModal.classList.add('opacity-0', '-translate-y-4', 'pointer-events-none');
+            }
+        }
+
+        openChatBtn.addEventListener('click', () => toggleChatModal(true));
+        closeChatBtn.addEventListener('click', () => toggleChatModal(false));
+
+        // --- Gemini API Call ---
+        const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=`; // API Key is handled by the environment
+
+        // Extract website content to provide context to the model
+        const portfolioContext = `
+            About Kshama Nitin Shah: AI Algorithm Developer at Stoneridge Inc., recent Machine Learning graduate from the University of Michigan. Passionate about building intelligent systems at the intersection of computer vision and multimodal learning. Research interests include image and video understanding, multimodal learning, and developing 'self-supervised' computer vision models that learn from natural language and cross-modal image data.
+
+            Project 1: Self-Supervised Object Detection with Multimodal Image Captioning.
+            Description: A novel self-supervised pipeline using natural language supervision to localize objects, achieving an mAP of 21.57% when finetuned with an FCOS detector.
+
+            Project 2: Language Supervised Pre-Training for Fine-grained Food Classification.
+            Description: Leveraged a vision and language pre-training model, trained on RedCaps sub-reddits, for fine-grained food classification, achieving 20% top-5 accuracy in zero-shot transfer.
+
+            Project 3: MC-VQA using Customized Prompts.
+            Description: Developed a novel zero-shot VQA pipeline by conjoining CLIP and T-5, achieving 49.5% accuracy, which is competitive with state-of-the-art zero-shot models.
+
+            Project 4: A Monocular Local Mapper for Urban Scenes.
+            Description: Developed a model to perform object detection, semantic segmentation, and depth estimation simultaneously using a U-Net, YOLO-v1, and MobileNet-v3 feature extractor.
+
+            Teaching Experience:
+            - Graduate Student Instructor for EECS 442/504 Computer Vision (Fall 2022) with Prof. Andrew Owens.
+            - Graduate Student Instructor for EECS 442 Computer Vision (Winter 2023) with Prof. David Fouhey.
+        `;
+
+        const systemPrompt = `You are a helpful and friendly AI assistant for Kshama Nitin Shah's personal portfolio website. Your name is "Kshama's AI Assistant". Your purpose is to answer questions from visitors about Kshama's skills, projects, and experience. First, use the context provided below. If the information is not in the context, use your search capabilities to find information from her public profiles and project links, such as her CV (available on the site) and GitHub profile (kshama2705). Be concise, professional, and synthesize information from search results to answer questions about specific details in her reports or code. If a question is outside of this scope, politely state that you can only answer questions about Kshama's professional work. Here is the context: ${portfolioContext}`;
+        
+        let chatHistory = [];
+
+        async function getGeminiResponse(userQuery) {
+            try {
+                const payload = {
+                    systemInstruction: {
+                        parts: [{ text: systemPrompt }]
+                    },
+                    contents: [
+                        ...chatHistory,
+                        { role: "user", parts: [{ text: userQuery }] }
+                    ],
+                    // Enable Google Search grounding
+                    tools: [{ "google_search": {} }],
+                };
+
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`API call failed with status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+                
+                if (!text) {
+                     return "Sorry, I couldn't generate a response. Please try again.";
+                }
+
+                // Add to history
+                chatHistory.push({ role: "user", parts: [{ text: userQuery }] });
+                chatHistory.push({ role: "model", parts: [{ text: text }] });
+
+                return text;
+
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                return "Sorry, I'm having trouble connecting right now. Please try again later.";
+            }
+        }
+
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const userInput = chatInput.value.trim();
+            if (!userInput) return;
+
+            // Disable form while processing
+            chatInput.disabled = true;
+            chatSubmitBtn.disabled = true;
+            chatSubmitBtn.innerHTML = `<svg class="w-5 h-5 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>`;
+
+            // Display user message
+            addMessage(userInput, 'user');
+            chatInput.value = '';
+
+            // Display thinking indicator
+            const thinkingBubble = addMessage('...', 'assistant', true);
+            
+            try {
+                const response = await getGeminiResponse(userInput);
+                // Update with actual response
+                thinkingBubble.querySelector('p').textContent = response;
+            } catch (error) {
+                 thinkingBubble.querySelector('p').textContent = "An unexpected error occurred. Please try again.";
+            } finally {
+                // Re-enable the form and remove the thinking animation
+                thinkingBubble.querySelector('p').classList.remove('animate-pulse');
+                chatInput.disabled = false;
+                chatSubmitBtn.disabled = false;
+                chatSubmitBtn.innerHTML = `<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>`;
+                chatInput.focus();
+            }
+        });
+
+        function addMessage(text, sender, isTyping = false) {
+            const messageWrapper = document.createElement('div');
+            messageWrapper.className = `flex ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
+
+            const bubble = document.createElement('div');
+            bubble.className = `ai-chat-bubble rounded-lg p-3 ${sender === 'user' ? 'ai-chat-bubble-user text-white' : 'ai-chat-bubble-assistant text-gray-900 dark:text-gray-200'}`;
+            
+            const textElement = document.createElement('p');
+            textElement.textContent = text;
+            
+            if (isTyping) {
+                textElement.classList.add('animate-pulse');
+            }
+
+            bubble.appendChild(textElement);
+            messageWrapper.appendChild(bubble);
+            chatMessages.appendChild(messageWrapper);
+            
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            return bubble;
+        }
+
+    </script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-       
