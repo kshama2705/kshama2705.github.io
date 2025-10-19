@@ -295,6 +295,12 @@
     </footer>
 
     <script>
+        // --- API Key Configuration ---
+        // 1. Get your free API key from Google AI Studio: https://aistudio.google.com/app/apikey
+        // 2. Paste your API key here.
+        const GEMINI_API_KEY = "AIzaSyDxnAuGsI7RgVVUnf9ccMrEvYPeFSq5Jv4";
+
+
         // --- Theme Toggling Logic ---
         const themeToggle = document.getElementById('theme-toggle');
         const lightIcon = document.getElementById('theme-icon-light');
@@ -464,7 +470,7 @@
         closeChatBtn.addEventListener('click', () => toggleChatModal(false));
 
         // --- Gemini API Call ---
-        const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=`; // API Key is handled by the environment
+        const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${GEMINI_API_KEY}`;
 
         // Extract website content to provide context to the model
         const portfolioContext = `
@@ -592,3 +598,4 @@
     </script>
 </body>
 </html>
+
